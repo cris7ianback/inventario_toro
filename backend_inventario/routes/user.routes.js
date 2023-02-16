@@ -19,7 +19,7 @@ router.get("/logout", controllerAuth.LogOut);
 //rutas Usuario
 
 router.post("/addUser", controllerUser.registerUser);
-router.get("/deleteUser/:id_user", controllerUser.deleteUser);
+router.get("/deleteUser/:id", controllerUser.deleteUser);
 router.get("/listUser", controllerUser.listUser);
 router.get("/listUserId/:id_user", controllerUser.listarUserId);
 router.put("/modifyUser/:id_user", controllerUser.modifyUser);

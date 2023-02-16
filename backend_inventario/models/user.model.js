@@ -1,9 +1,9 @@
 const conexion = require("../config/conexion");
 
 module.exports = {
-    deleteUser: function (id_user, callback) {
-        const sql = "DELETE FROM user WHERE id_user =?";
-        conexion.query(sql, id_user, function (err, rows) {
+    deleteUser: function (id, callback) {
+        const sql = "DELETE FROM usuarios WHERE id =?";
+        conexion.query(sql, id, function (err, rows) {
             if (err) throw err;
             else {
                 return callback(rows[0]);

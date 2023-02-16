@@ -1,0 +1,5 @@
+/node_modules
+*.pack
+*.pack.old
+.angular
+src\environments

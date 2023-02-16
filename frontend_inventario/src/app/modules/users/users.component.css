@@ -1,0 +1,48 @@
+table {
+  width: 100%;
+}
+/* th {
+  font-size: 15px;
+  text-overflow: ellipsis;
+  text-align: center !important;
+  width: auto;
+} */
+
+.pointer {
+  cursor: pointer;
+}
+
+/* body {
+  margin: 3%;
+  border: 20px;
+  font-weight: normal;
+} */
+
+
+
+
+
+h1 {
+  color: #002e5b;
+}
+
+.mat-icon-button {
+  color: #1878b0;
+}
+
+
+
+/* td {
+  padding: 5px 10px;
+  text-align: left;
+
+} */
+
+#azul {
+  color: #1878b0;
+
+}
+
+#red {
+  color: #e15639;
+}

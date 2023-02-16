@@ -1,0 +1,15 @@
+mat-form-field {
+    width: 100%;
+}
+
+h1 {
+    color: #002E5B;
+}
+
+th{
+    width: 50%;
+}
+
+mat-dialog-content{
+    width: 40%;
+}

@@ -1,0 +1,32 @@
+<html lang="es">
+
+
+<form [formGroup]="loginForm" class="login-form">
+    <div class="contenedor">
+        
+        <span class="centrar">
+            <div>
+                <h1 id="titulo">Inventario Seguridad</h1>
+                
+            </div>       
+            <img src="../../../assets/img/logo.png"/>
+        </span>
+    </div>
+
+    <input type="email" class="login-username" autofocus="true" required="true" placeholder="Email"
+        formControlName="email" />
+    <span id="validacion" class="form-text" *ngIf="campoEsValido('email')">
+        *Este campo es obligatorio
+    </span>
+    <input formControlName="password" type="password" class="login-password" required="true" placeholder="Password" />
+    <span id="validacion" class="form-text" *ngIf="campoEsValido('password')">
+        *Este campo es obligatorio
+    </span>
+    <button class="w-100 btn btn-lg login-submit" type="submit" id="login" [disabled]="loginForm.invalid"
+        (click)="login()">Ingresar</button>
+</form>
+
+<div class="underlay-photo"></div>
+<div class="underlay-black"></div>
+
+</html>

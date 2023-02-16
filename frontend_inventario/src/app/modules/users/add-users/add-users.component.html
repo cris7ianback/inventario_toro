@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-14 mx-auto">
+            <div class="card">
+                <div class="card-header">
+                    <h1>Registrar Usuario</h1>
+                    <p>*Debe completar los campos <strong>antes Registrar Usuario.</strong> </p>
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="formAgUser">
+
+                        <div class="modal-body">
+                            <!--FORMULARIO NOMBRE -->
+                            <div mat-dialog-content>
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Nombre</mat-label>
+                                    <input formControlName="nombre" matInput placeholder="Ingrese su nombre" />
+                                    <mat-error>Escriba su Nombre</mat-error>
+                                </mat-form-field>
+                            </div>
+                            <!--FORMULARIO APELLIDO -->
+                            <div mat-dialog-content>
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Apellido</mat-label>
+                                    <input formControlName="apellido" matInput placeholder="Ingrese su apellido" />
+                                    <mat-error>Escriba su apellido</mat-error>
+                                </mat-form-field>
+                            </div>
+                            <!-- FORMULARIO EMAIL -->
+                            <div mat-dialog-content>
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Email</mat-label>
+                                    <input formControlName="email" matInput placeholder="Ejemplo@test.cl" />
+                                    <mat-error>Escriba su Correo Formato ejemplo@prueba.cl</mat-error>
+                                </mat-form-field>
+
+                            </div>
+                            <!-- FORMULARIO PASSWORD -->
+                            <div mat-dialog-content>
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Password</mat-label>
+                                    <input [type]="hide ? 'password': 'text'" formControlName="password" matInput
+                                        placeholder="password" />
+                                    <mat-icon matSuffix (click)="hide = !hide"> {{hide ? 'visibility_off' :
+                                        'visibility'}}</mat-icon>
+                                    <mat-error>Escriba su Password</mat-error>
+                                </mat-form-field>
+                            </div>
+                            <!-- FORMULARIO CONFIRMAR PASSWORD -->
+                            <div mat-dialog-content>
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Confirmar Password</mat-label>
+                                    <input [type]="hide ? 'password': 'text'" formControlName="confirmPassword" matInput
+                                        placeholder="Confirmar password" />
+                                    <mat-icon matSuffix (click)="hide = !hide"> {{hide ? 'visibility_off' :
+                                        'visibility'}}</mat-icon>
+                                    <mat-error>Contraseñas no coinciden</mat-error>
+                                </mat-form-field>
+                            </div>
+                            <!-- FORMULARIO ROL -->
+                            <div mat-dialog-content>
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Tipo de Rol </mat-label>
+                                    <mat-select formControlName="rol">
+                                        <mat-option value="admin">Administrador</mat-option>
+                                        <mat-option value="usuario">Usuario</mat-option>                                      
+                                    </mat-select>
+                                    <mat-error>Debe seleccionar un Rol</mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+
+                            <div mat-dialog-actions [align]="'end'" class="modal-footer">
+                                <button mat-raised-button class="btn btn-warning" mat-dialog-close
+                                    (click)="cancelar()">Cancelar</button>
+                                <button style="margin-left: 8px" mat-raised-button class="btn btn-success"
+                                    [disabled]="formAgUser.invalid" (click)="registrarUsuario()">
+                                    Registrar Usuario </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

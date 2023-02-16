@@ -1,0 +1,27 @@
+<mat-nav-list>
+  <a mat-list-item routerLinkActive="list-item-active" href="/users" *ngIf="estado_admin">Usuarios</a>
+  <a mat-list-item class="btn" (click)="addUser()" *ngIf="estado_admin">
+    Registrar Usuario <i class="fa-solid fa-user-plus"></i></a>
+  <a mat-list-item class="btn" (click)="addUser()" *ngIf="estado_admin">
+    Registrar Usuario <i class="fa-solid fa-user-plus"></i></a>
+
+  <mat-divider></mat-divider>
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/productos"><i
+      class="fa-light fa-block-brick-fire"></i>Producto</a>
+
+  <mat-divider></mat-divider>
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/licencias">Licencias</a>
+
+  <mat-divider></mat-divider>
+  <!-- <a mat-list-item routerLinkActive="list-item-active" href="/pendrives"
+    >Perifericos</a
+  >
+  <a mat-list-item class="btn" (click)="addPerifericos()">
+    Registrar Perifericos <i class="fa-solid fa-user-plus"></i
+  ></a>
+
+  <mat-divider></mat-divider>
+  <a mat-list-item routerLinkActive="list-item-active" href="/graficos"
+    >Gráficos</a
+  > -->
+</mat-nav-list>

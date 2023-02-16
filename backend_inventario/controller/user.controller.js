@@ -5,8 +5,8 @@ const conexion = require("../config/conexion");
 module.exports = {
 
     deleteUser: function (req, res) {
-        const id_user = req.params.id_user;
-        userModule.deleteUser(id_user, function (data) {
+        const id = req.params.id;
+        userModule.deleteUser(id, function (data) {
           res.send(data);
         });
       },

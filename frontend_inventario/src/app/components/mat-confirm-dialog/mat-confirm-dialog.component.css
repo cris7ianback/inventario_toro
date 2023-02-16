@@ -1,0 +1,28 @@
+.container {
+	align-items: center;
+}
+
+h1 {
+	align-items: center;
+}
+
+.titulo {
+
+	align-items: center;
+}
+
+.parrafo p {
+	align-content: center;
+	padding: 30px;
+	font-weight: bold;
+}
+
+.footer {
+	padding: 10px;
+	align-items: center;
+}
+
+html {
+	width: auto;
+	height: auto;
+}

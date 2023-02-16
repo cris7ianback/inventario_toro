@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-14 mx-auto">
+            <div class="card">
+                <div class="card-header">
+                    <h1>Modificar de Usuario</h1>
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="formModUsuario">
+
+
+                        <!-- FORMULARIO PASSWORD -->
+                        <div mat-dialog-content>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Password</mat-label>
+                                <input [type]="hide ? 'password': 'text'" formControlName="password" matInput
+                                    placeholder="password" />
+                                <mat-icon matSuffix (click)="hide = !hide"> {{hide ? 'visibility_off' :
+                                    'visibility'}}
+                                </mat-icon>
+                                <mat-error>Escriba su Contraseña Actual</mat-error>
+                            </mat-form-field>
+                        </div>
+
+
+                        <!-- FORMULARIO PASSWORD CONFIRMACION -->
+                        <div mat-dialog-content>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Confirmar Password</mat-label>
+                                <input [type]="hide ? 'confirmPassword': 'text'" formControlName="confirmPassword"
+                                    matInput placeholder="Confirmar Password" />
+                                <mat-icon matSuffix (click)="hide = !hide"> {{hide ? 'visibility_off' :
+                                    'visibility'}}
+                                </mat-icon>
+                                <mat-error>Contraseña deben ser iguales</mat-error>
+                            </mat-form-field>
+                        </div>
+
+                        <div mat-dialog-actions [align]="'end'">
+                            <button mat-raised-button class="btn btn-warning" mat-dialog-close
+                                (click)="cancelar()">Cancelar</button>
+                            <button style="margin-left: 8px" mat-raised-button class="btn btn-success"
+                                [disabled]="formModUsuario.invalid" (click)="modifyPassUser()">
+                                Modificar Usuario</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

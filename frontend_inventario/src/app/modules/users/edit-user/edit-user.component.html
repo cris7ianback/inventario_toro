@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-14 mx-auto">
+            <div class="card">
+                <div class="card-header">
+                    <h1 >Modificar de Usuario</h1>
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="formEditUser">
+
+                        <!--FORMULARIO NOMBRE -->
+                        <div mat-dialog-content disable>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Nombre</mat-label>
+                                <input formControlName="nombre" matInput placeholder="Ingrese su nombre" />
+                                <mat-error>Escriba su Nombre </mat-error>
+                            </mat-form-field>
+                        </div>
+                        <!--FORMULARIO APELLIDO -->
+                        <div mat-dialog-content>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Apellido</mat-label>
+                                <input formControlName="apellido" matInput placeholder="Ingrese su apellido" />
+                                <mat-error>Escriba su apellido </mat-error>
+                            </mat-form-field>
+                        </div>
+                        <!-- FORMULARIO EMAIL -->
+                        <div mat-dialog-content>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Email</mat-label>
+                                <input formControlName="email" matInput placeholder="Ejemplo@test.cl" />
+                                <mat-error>Escriba su Correo ejemplo@test.cl</mat-error>
+                            </mat-form-field>
+                        </div>
+                      
+                        <!-- FORMULARIO ROL -->
+                        <div mat-dialog-content>
+                            <mat-form-field appearance="outline">
+                                <mat-label>Tipo de Rol </mat-label>
+                                <mat-select formControlName="rol">
+                                    <mat-option value="admin">Administrador</mat-option>
+                                    <mat-option value="usuario">Usuario</mat-option>                                    
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div mat-dialog-actions [align]="'end'">
+                            <button mat-raised-button class="btn btn-warning" mat-dialog-close
+                                (click)="cancelar()">Cancelar</button>
+                            <button style="margin-left: 8px" mat-raised-button class="btn btn-success"
+                                [disabled]="formEditUser.invalid" (click)="editUser()">
+                                Modificar Usuario</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,171 @@
+<!-- 
+<div class="container">
+    <div class="row">
+        <div class="col-md-14 mx-auto">
+            <div class="card">
+                <div class="card-header">
+                    <h1>Registrar Periferico Firewall</h1>
+                    <p>*Debe completar los campos <strong>antes Registrar Modelo Firewall.</strong> </p>
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="formEditPeriferico">
+
+                        <div class="modal-body">
+                            FORMULARIO NOMBRE 
+                            <div mat-dialog-content>
+                                <table>
+                                    <td>
+                                        <mat-form-field appearance="outline">
+                                            <mat-label>Restricción</mat-label>
+                                            <mat-select formControlName="restriccion">
+                                                <mat-option value="n1_sin_restricciones">n1_sin_restricciones
+                                                </mat-option>
+                                                <mat-option value="n2_red_interna">n2_red_interna</mat-option>
+                                                <mat-option value="n3_agregadurias">n3_agregadurias</mat-option>
+                                                <mat-option value="n4_solo red interna">n4_solo red interna</mat-option>
+                                            </mat-select>
+                                            <mat-error>Seleccione Restricción</mat-error>
+                                        </mat-form-field>
+                                    </td>
+
+                                    <td>
+                                        <mat-form-field appearance="outline">
+                                            <mat-label>Grado</mat-label>
+                                            <mat-select formControlName="grado">
+                                                 <mat-option *ngFor="let par of grado" [value]="par.grado">
+                                                    {{par.grado}}</mat-option> 
+                                            </mat-select>
+                                            <mat-error>Seleccione Grado de Firewall</mat-error>
+                                        </mat-form-field>
+                                    </td>
+
+                                    <td>
+                                        <mat-form-field appearance="outline">
+                                            <mat-label>Nombre</mat-label>
+                                            <input formControlName="nombre" matInput placeholder="Ingrese Nombre" />
+                                            <mat-error>Escriba Nombre</mat-error>
+                                        </mat-form-field>
+                                    </td>
+                                    <td>
+                                        <mat-form-field appearance="outline">
+                                            <mat-label>Apellidos</mat-label>
+                                            <input formControlName="apellidos" matInput
+                                                placeholder="Ingrese Apellidos" />
+                                            <mat-error>Escriba Apellidos</mat-error>
+                                        </mat-form-field>
+                                    </td>
+                                </table>
+                                <table>
+                                    <td>
+                                        <mat-form-field appearance="outline">
+                                            <mat-label>N° Dispositivo</mat-label>
+                                            <input formControlName="numero_dispositivo" matInput
+                                                placeholder="Número de Dispositivo Apellidos" />
+                                            <mat-error>Escriba Numero de Dispositivo</mat-error>
+                                        </mat-form-field>
+                                    </td>
+                                    <td>
+                                        <mat-form-field appearance="outline">
+                                            <mat-label>Fecha Entrega</mat-label>
+                                            <input formControlName="fecha_entrega" matInput type="date"
+                                                placeholder="Ingrese Apellidos" />
+                                        </mat-form-field>
+                                    </td>
+                                    <td>
+                                        <mat-form-field appearance="outline">
+                                            <mat-label>Correo</mat-label>
+                                            <input formControlName="correo" matInput type="email"
+                                                placeholder="Ingrese Correo" />
+                                            <mat-error>Escriba Apellidos</mat-error>
+                                        </mat-form-field>
+                                    <td>
+                                        <mat-form-field appearance="outline">
+                                            <mat-label>Categoría</mat-label>
+                                            <mat-select formControlName="tipo_periferico">
+                                                <mat-option value="CAMARAS">Camaras</mat-option>
+                                                <mat-option value="IMPRESORA">Impresora</mat-option>
+                                                <mat-option value="LECTOR DE MEMORIA">Lector de Memoria</mat-option>
+                                                <mat-option value="LECTOR DVD">Lector de DVD</mat-option>
+                                                <mat-option value="PENDRIVE GENERICO">Pendrive Generico</mat-option>
+                                                <mat-option value="SafeStick Managed">SafeStick Managed</mat-option>
+                                                <mat-option value="Sentry ONE Managed">Sentry ONE Managed</mat-option>
+                                                <mat-option value="SSD">SSD</mat-option>
+                                            </mat-select>
+                                            <mat-error>Seleccione Categoría</mat-error>
+                                        </mat-form-field>
+                                    </td>
+                                </table>
+
+                                <table>
+                                    <td>
+
+                                           <mat-form-field appearance="outline">
+                                            <mat-label>Device Type</mat-label>
+                                            <input formControlName="device_type" matInput type="text"
+                                                placeholder="Ingrese device_type" />
+                                            <mat-error>Escriba Apellidos</mat-error>
+                                        </mat-form-field>
+                                    </td>
+                                    <td>
+
+                                           <mat-form-field appearance="outline">
+                                            <mat-label>Id Hardware</mat-label>
+                                            <input formControlName="hardware_id" matInput type="text"
+                                                placeholder="Ingrese  ID Hardware" />
+                                            <mat-error>Escriba ID Hardware </mat-error>
+                                        </mat-form-field>
+                                    </td>
+
+                   <!--                    <td>
+
+                                        <mat-form-field appearance="outline">
+                                            <mat-label>Serial</mat-label>
+                                            <input formControlName="serial" matInput type="text"
+                                                placeholder="Ingrese Serial" />
+                                            <mat-error>Escriba ID Hardware </mat-error>
+                                        </mat-form-field>
+                                    </td>                                 
+
+                                    <td>
+                                        <mat-form-field appearance="outline">
+                                            <mat-label>Estado</mat-label>
+                                            <mat-select formControlName="estado">
+                                                <mat-option value="EN USO">En Uso</mat-option>
+                                                <mat-option value="DISPONIBLE">Disponible</mat-option>
+                                            </mat-select>
+                                            <mat-error>Seleccione Categoría</mat-error>
+                                        </mat-form-field>
+                                    </td>
+                                </table>
+
+                                <td>
+                                    <mat-form-field appearance="outline">
+                                        <mat-label>Version</mat-label>
+                                        <mat-select formControlName="version">
+                                            <mat-option value="CUARTA BRIGADA">Cuarta Brigada</mat-option>
+                                            <mat-option value="QUINTA BRIGADA">Quinta Brigada</mat-option>
+                                        </mat-select>
+                                        <mat-error>Seleccione Categoría</mat-error>
+                                    </mat-form-field>
+                                </td>
+                            </div>
+                        </div>
+                      
+
+                        <div class="modal-footer">
+
+                            <div mat-dialog-actions [align]="'end'" class="modal-footer">
+                                <button mat-raised-button class="btn btn-warning" mat-dialog-close
+                                    (click)="cancelar()">Cancelar</button>
+                                <button style="margin-left: 8px" mat-raised-button class="btn btn-success"
+                                    [disabled]="formEditPeriferico.invalid" >
+                                    (click)="addPeriferico()"> 
+                                    Registrar Periferico </button> 
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div> -->
